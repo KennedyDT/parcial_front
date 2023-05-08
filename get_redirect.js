@@ -2,7 +2,7 @@ const miapi = 'http://127.0.0.1:8000/api/sales'
 
 function eliminarVenta(id) {
     id=parseInt(id);
-    let endPoint = '' + id;
+    let endPoint = 'http://127.0.0.1:8000/api/sales' + id;
     fetch(endPoint, {
         method: 'DELETE'
     })
@@ -16,7 +16,7 @@ function eliminarVenta(id) {
 
 function mostrarVentas(){
     let sales = document.getElementById("ventas");
-    let endPoint = '';
+    let endPoint = 'http://127.0.0.1:8000/api/sales';
     sales.innerHTML = '';
     fetch(endPoint)
     .then(response => response.json())
